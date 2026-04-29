@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strictly Pure HTML Reference Guide</title>
+</head>
+<body>
+
+    <!-- Structure Section -->
+    <header>
+        <h1>Strictly Pure HTML Tag Guide</h1>
+        <p>This page uses no CSS or JavaScript styling. Everything you see is the browser's default rendering.</p>
+        <nav>
+            <a href="#text">Text</a> | 
+            <a href="#lists">Lists</a> | 
+            <a href="#multimedia">Multimedia</a> | 
+            <a href="#tables">Tables</a> | 
+            <a href="#forms">Forms</a> | 
+            <a href="#semantic">Semantic</a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        <!-- Text Elements -->
+        <section id="text">
+            <h2>1. Basic Text Tags</h2>
+            
+            <p><strong>BDO (Bi-Directional Override):</strong> <bdo dir="rtl">This text will go from right to left.</bdo></p>
+
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+            
+            <p>This is a standard paragraph <code>&lt;p&gt;</code>.</p>
+            
+            <p>
+                <b>Bold text</b><br>
+                <strong>Strong/Important text</strong><br>
+                <i>Italic text</i><br>
+                <em>Emphasized text</em><br>
+                <u>Underlined text</u><br>
+                <s>Strikethrough text</s><br>
+                <mark>Highlighted/Marked text</mark><br>
+                <small>Small text</small><br>
+                <sub>Subscript text</sub><br>
+                <sup>Superscript text</sup><br>
+                <abbr title="HyperText Markup Language">HTML</abbr> (Abbreviation with title)<br>
+                <cite>This is a citation</cite><br>
+                <code>This is a code block</code><br>
+                <kbd>Ctrl+S</kbd> (Keyboard input)<br>
+                <samp>Sample output</samp><br>
+                <var>x</var> = <var>y</var> + 2 (Variable)<br>
+                <dfn>Definition term</dfn><br>
+                <q>Inline quote</q><br>
+                <ruby>漢 <rt>kan</rt></ruby> (Ruby annotation)<br>
+                Word break opportunity: Super<wbr>cali<wbr>fragi<wbr>listic<wbr>expi<wbr>ali<wbr>docious
+            </p>
+
+            <blockquote>
+                This is a long blockquote that the browser usually indents by default.
+            </blockquote>
+
+            <pre>
+This is pre-formatted text.
+It preserves    spaces
+and line breaks.
+            </pre>
+        </section>
+
+        <hr>
+
+        <!-- List Elements -->
+        <section id="lists">
+            <h2>2. Lists</h2>
+            
+            <h3>Unordered List</h3>
+            <ul>
+                <li>Item One</li>
+                <li>Item Two
+                    <ul>
+                        <li>Nested Item</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Ordered List</h3>
+            <ol>
+                <li>First Item</li>
+                <li>Second Item</li>
+            </ol>
+
+            <h3>Description List</h3>
+            <dl>
+                <dt>Term 1</dt>
+                <dd>Definition for term 1.</dd>
+                <dt>Term 2</dt>
+                <dd>Definition for term 2.</dd>
+            </dl>
+        </section>
+
+        <hr>
+
+        <!-- Multimedia Elements -->
+        <section id="multimedia">
+            <h2>3. Multimedia & Graphics</h2>
+            
+            <h3>Image</h3>
+            <img src="puppy_lovers/puppy-1.jpg" alt="A cute puppy" width="200">
+
+            <h3>Figure & Figcaption</h3>
+            <figure>
+                <img src="puppy_lovers/puppy-2.jpg" alt="Another puppy" width="200">
+                <figcaption>Figure 1: A puppy caption.</figcaption>
+            </figure>
+
+            <h3>Audio</h3>
+            <audio controls>
+                <source src="audio.mp3" type="audio/mpeg">
+                Your browser does not support audio.
+            </audio>
+
+            <h3>Video</h3>
+            <video width="320" height="240" controls>
+                <source src="movie.mp4" type="video/mp4">
+                Your browser does not support video.
+            </video>
+
+            <h3>Embeds</h3>
+            <iframe src="index.html" width="400" height="200" title="Iframe example"></iframe>
+
+            <h3>SVG Graphics</h3>
+            <svg width="60" height="60">
+                <circle cx="30" cy="30" r="25" stroke="black" stroke-width="2" fill="red" />
+            </svg>
+
+            <h3>Canvas</h3>
+            <canvas id="myCanvas" width="200" height="50" style="border:1px solid #000000;"></canvas>
+
+            <h3>Image Map</h3>
+            <p>Click left/right of the image below:</p>
+            <img src="puppy_lovers/banner-puppies.jpg" alt="Puppy Banner" usemap="#puppymap" width="400">
+            <map name="puppymap">
+                <area shape="rect" coords="0,0,200,200" alt="Text Section" href="#text">
+                <area shape="rect" coords="201,0,400,200" alt="Form Section" href="#forms">
+            </map>
+        </section>
+
+        <hr>
+
+        <!-- Table Elements -->
+        <section id="tables">
+            <h2>4. Tables</h2>
+            <table border="1">
+                <colgroup>
+                    <col span="1" style="background-color: #f2f2f2;">
+                    <col span="2">
+                </colgroup>
+                <caption>Table with Colgroup Styling</caption>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Alice</td>
+                        <td>Active</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">End of User Table</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <hr>
+
+        <!-- Form Elements -->
+        <section id="forms">
+            <h2>5. Forms & Inputs</h2>
+            <form action="#" method="get">
+                <fieldset>
+                    <legend>Interactive Form</legend>
+                    
+                    <label for="text">Text:</label>
+                    <input type="text" id="text" name="text" placeholder="Type here..."><br><br>
+
+                    <label for="search">Search:</label>
+                    <input type="search" id="search" name="search"><br><br>
+
+                    <label for="tel">Telephone:</label>
+                    <input type="tel" id="tel" name="tel" placeholder="123-456-7890"><br><br>
+
+                    <label for="file">File Upload:</label>
+                    <input type="file" id="file" name="file"><br><br>
+
+                    <label for="range">Range:</label>
+                    <input type="range" id="range" name="range"><br><br>
+
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date"><br><br>
+
+                    <label for="color">Color:</label>
+                    <input type="color" id="color" name="color"><br><br>
+
+                    <label>Radio:</label>
+                    <input type="radio" id="r1" name="radio" value="1"> <label for="r1">Yes</label>
+                    <input type="radio" id="r2" name="radio" value="2"> <label for="r2">No</label><br><br>
+
+                    <label for="select">Select:</label>
+                    <select id="select" name="select">
+                        <optgroup label="Option Group">
+                            <option value="o1">Option 1</option>
+                        </optgroup>
+                    </select><br><br>
+
+                    <label for="browsers">Datalist (Try typing):</label>
+                    <input list="browser-list" id="browsers" name="browsers">
+                    <datalist id="browser-list">
+                        <option value="Chrome">
+                        <option value="Firefox">
+                        <option value="Safari">
+                    </datalist><br><br>
+
+                    <label for="area">Textarea:</label><br>
+                    <textarea id="area" name="area" rows="4" cols="30"></textarea><br><br>
+
+                    <p>
+                        Calculator: 
+                        <input type="number" id="a" value="10"> + 
+                        <input type="number" id="b" value="20"> = 
+                        <output name="res" for="a b">30</output>
+                    </p>
+
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </fieldset>
+            </form>
+        </section>
+
+        <hr>
+
+        <!-- Semantic Elements -->
+        <section id="semantic">
+            <h2>6. Modern Semantic & Extra Tags</h2>
+            <article>
+                <h3>Article Heading</h3>
+                <p>Self-contained content.</p>
+                <aside>
+                    <p>Side-note content.</p>
+                </aside>
+            </article>
+
+            <details>
+                <summary>Toggle Information</summary>
+                <p>Detailed info goes here.</p>
+            </details>
+
+            <p>Progress: <progress value="75" max="100"></progress></p>
+            <p>Meter: <meter value="0.5" min="0" max="1">50%</meter></p>
+            <p>Time: <time datetime="2026-04-30">April 30</time></p>
+            
+            <p draggable="true">This is draggable.</p>
+            <p contenteditable="true">This is editable. Click and type!</p>
+
+            <template id="myTemplate">
+                <p>This content is hidden by default.</p>
+            </template>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 Pure HTML Master Guide</p>
+        <address>
+            Contact: <a href="mailto:naol.yizotaw@gmail.com">naol.yizotaw@gmail.com</a>
+        </address>
+    </footer>
+
+</body>
+</html>
