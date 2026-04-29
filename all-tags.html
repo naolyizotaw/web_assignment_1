@@ -46,6 +46,8 @@
                 <li><a href="#forms">5. Forms</a></li>
                 <li><a href="#misc">6. Misc</a></li>
                 <li><a href="#global-attributes">7. Global</a></li>
+                <li><a href="#attribute-reference">8. Attributes</a></li>
+                <li><a href="#checklist">9. Checklist</a></li>
             </ul>
         </nav>
     </header>
@@ -64,6 +66,7 @@
             <p>Definitions: <dfn title="World Wide Web Consortium">W3C</dfn> sets the standards for HTML.</p>
             <p>Short Quote: The web is <q>a global library</q> for everyone.</p>
             <p>Variable: Let <var>E</var> = <var>m</var><var>c</var><sup>2</sup>.</p>
+            <p>BDI isolation: User <bdi>إيان</bdi>: 80 points.</p>
         </section>
 
         <!-- Text Formatting -->
@@ -77,6 +80,7 @@
             <blockquote>
                 "HTML is the skeleton of the web." - Unknown Developer
             </blockquote>
+            <p>Long word with break: Super<wbr>cali<wbr>fragi<wbr>listic<wbr>expi<wbr>ali<wbr>docious.</p>
         </section>
 
         <!-- Lists -->
@@ -132,6 +136,11 @@
             <svg width="100" height="100">
                 <circle cx="50" cy="50" r="40" stroke="blue" stroke-width="4" fill="lightblue" />
             </svg>
+
+            <h3>Canvas</h3>
+            <canvas id="myCanvas" width="200" height="100" style="border:1px solid #ddd; border-radius: 8px;">
+                Your browser does not support the canvas tag.
+            </canvas>
         </section>
 
         <!-- Tables -->
@@ -178,6 +187,15 @@
 
                     <label for="color">Favorite Color:</label>
                     <input type="color" id="color" name="color"><br><br>
+
+                    <label for="search">Search:</label>
+                    <input type="search" id="search" name="search" placeholder="Type here..."><br><br>
+
+                    <label for="tel">Telephone:</label>
+                    <input type="tel" id="tel" name="tel" placeholder="123-456-7890"><br><br>
+
+                    <label for="file">Upload File:</label>
+                    <input type="file" id="file" name="file"><br><br>
 
                     <label for="bday">Birthday:</label>
                     <input type="date" id="bday" name="bday"><br><br>
@@ -226,12 +244,53 @@
         <!-- Global Attributes -->
         <section id="global-attributes">
             <h2>7. Global Attributes</h2>
-            <div draggable="true" style="padding: 10px; border: 1px solid #ccc; background: #eee; cursor: grab;">
+            <div draggable="true" style="padding: 10px; border: 1px solid #ccc; background: #eee; cursor: grab; border-radius: 8px;">
                 I am <strong>draggable</strong>! Try dragging me.
             </div>
             <p>Hover over this <span title="Hello! I am a tooltip.">text</span> for a tooltip.</p>
             <p>This text is <span hidden>invisible</span> because of the <code>hidden</code> attribute.</p>
             <p>Tab to me: <a href="#" tabindex="1">First</a>, <a href="#" tabindex="2">Second</a>.</p>
+        </section>
+
+        <!-- Attribute Reference -->
+        <section id="attribute-reference">
+            <h2>8. Common Attributes Reference</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Attribute</th>
+                        <th>Purpose</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>id</code></td><td>Unique ID</td><td><code>id="top"</code></td></tr>
+                    <tr><td><code>class</code></td><td>Grouping</td><td><code>class="active"</code></td></tr>
+                    <tr><td><code>href</code></td><td>Link target</td><td><code>href="url"</code></td></tr>
+                    <tr><td><code>src</code></td><td>Media source</td><td><code>src="img.png"</code></td></tr>
+                    <tr><td><code>alt</code></td><td>Image text</td><td><code>alt="Logo"</code></td></tr>
+                    <tr><td><code>placeholder</code></td><td>Hint text</td><td><code>placeholder="..."</code></td></tr>
+                    <tr><td><code>required</code></td><td>Mandatory input</td><td><code>required</code></td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Checklist -->
+        <section id="checklist">
+            <h2>9. Learning Checklist</h2>
+            <table>
+                <thead>
+                    <tr><th>Topic</th><th>Status</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Basic Layout (HTML, Head, Body)</td><td><input type="checkbox"></td></tr>
+                    <tr><td>Semantic Tags (Header, Main, Footer)</td><td><input type="checkbox"></td></tr>
+                    <tr><td>Text Formatting (H1-H6, P, Strong)</td><td><input type="checkbox"></td></tr>
+                    <tr><td>Lists & Tables</td><td><input type="checkbox"></td></tr>
+                    <tr><td>Multimedia (Img, Video, Audio)</td><td><input type="checkbox"></td></tr>
+                    <tr><td>Forms & Inputs</td><td><input type="checkbox"></td></tr>
+                </tbody>
+            </table>
         </section>
     </main>
 
@@ -240,6 +299,6 @@
         <p>Contact: <a href="mailto:naol.yizotaw@gmail.com">naol.yizotaw@gmail.com</a></p>
         <p><a href="#top">Back to top</a></p>
     </footer>
-g
+
 </body>
 </html>
