@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A comprehensive guide to HTML tags and attributes for beginners.">
+    <meta name="keywords" content="HTML, Tutorial, Beginner, Tags, Attributes">
+    <meta name="author" content="Naol Yizotaw">
+    <title>Beginner HTML Tags & Attributes Reference</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; max-width: 1000px; margin: 0 auto; padding: 40px; color: #333; background-color: #f9f9f9; }
+        header { background: #ffffff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 30px; }
+        nav ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 15px; }
+        nav a { text-decoration: none; color: #007bff; font-weight: bold; }
+        nav a:hover { text-decoration: underline; }
+        section { background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin-bottom: 30px; }
+        h1, h2, h3 { color: #222; }
+        h2 { border-bottom: 2px solid #007bff; padding-bottom: 10px; margin-top: 0; }
+        code { background: #f0f0f0; padding: 2px 5px; border-radius: 4px; font-family: monospace; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .interactive-box { border: 2px dashed #007bff; padding: 20px; border-radius: 8px; background: #f0f7ff; margin: 20px 0; }
+        footer { text-align: center; padding: 40px; color: #777; font-size: 0.9em; }
+        dialog { border: none; border-radius: 10px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); padding: 30px; }
+        dialog::backdrop { background: rgba(0,0,0,0.5); }
+    </style>
+</head>
+<body title="The whole body of the document">
+
+    <header id="top">
+        <h1 title="Main Heading">The Ultimate HTML5 Tag Reference</h1>
+        <p>A comprehensive, beginner-friendly guide to modern HTML tags and their attributes.</p>
+        
+        <div class="interactive-box">
+            <p contenteditable="true"><strong>Try it:</strong> This paragraph is <code>contenteditable</code>. Click here and start typing!</p>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#introduction">0. Structure</a></li>
+                <li><a href="#text-formatting">1. Text</a></li>
+                <li><a href="#lists">2. Lists</a></li>
+                <li><a href="#multimedia">3. Multimedia</a></li>
+                <li><a href="#tables">4. Tables</a></li>
+                <li><a href="#forms">5. Forms</a></li>
+                <li><a href="#misc">6. Misc</a></li>
+                <li><a href="#global-attributes">7. Global</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Semantic Structure -->
+        <section id="introduction">
+            <h2>0. Semantic Structure</h2>
+            <article>
+                <h3>The Article Tag</h3>
+                <p>This entire section is inside an <code>&lt;article&gt;</code>. It represents a self-contained piece of content.</p>
+                <aside style="background: #fff8e1; padding: 10px; border-left: 5px solid #ffc107;">
+                    <p><strong>Aside:</strong> I'm an <code>&lt;aside&gt;</code>! I provide extra info related to the main content.</p>
+                </aside>
+            </article>
+            <p>Definitions: <dfn title="World Wide Web Consortium">W3C</dfn> sets the standards for HTML.</p>
+            <p>Short Quote: The web is <q>a global library</q> for everyone.</p>
+            <p>Variable: Let <var>E</var> = <var>m</var><var>c</var><sup>2</sup>.</p>
+        </section>
+
+        <!-- Text Formatting -->
+        <section id="text-formatting">
+            <h2>1. Text Formatting</h2>
+            <p>Standard paragraph with <strong>bold</strong>, <em>italics</em>, and <u>underline</u>.</p>
+            <p><mark>Highlighted text</mark>, <small>smaller text</small>, and <del>deleted</del> <ins>inserted</ins> text.</p>
+            <p>Code snippet: <code>console.log("Hello World");</code></p>
+            <p>Keyboard input: Press <kbd>F12</kbd> for DevTools.</p>
+            <p>Sample output: <samp>Error 404</samp></p>
+            <blockquote>
+                "HTML is the skeleton of the web." - Unknown Developer
+            </blockquote>
+        </section>
+
+        <!-- Lists -->
+        <section id="lists">
+            <h2>2. Lists</h2>
+            <h3>Unordered</h3>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+            </ul>
+            <h3>Ordered (starting at 10)</h3>
+            <ol start="10">
+                <li>Plan</li>
+                <li>Code</li>
+                <li>Deploy</li>
+            </ol>
+            <h3>Description List</h3>
+            <dl>
+                <dt>Frontend</dt>
+                <dd>What the user sees.</dd>
+                <dt>Backend</dt>
+                <dd>The server and database.</dd>
+            </dl>
+        </section>
+
+        <!-- Multimedia -->
+        <section id="multimedia">
+            <h2>3. Multimedia & Graphics</h2>
+            <figure>
+                <img src="puppy_lovers/puppy-1.jpg" alt="Cute puppy" width="250" style="border-radius: 8px;">
+                <figcaption>Fig 1. A local image inside a figure.</figcaption>
+            </figure>
+
+            <h3>Responsive Picture</h3>
+            <picture>
+                <source srcset="puppy_lovers/puppy-2.jpg" media="(min-width: 600px)">
+                <img src="puppy_lovers/puppy-3.jpg" alt="Responsive Puppy" width="200">
+            </picture>
+
+            <h3>Audio & Video</h3>
+            <audio controls>
+                <source src="audio-example.mp3" type="audio/mpeg">
+                Your browser doesn't support audio.
+            </audio>
+            <br>
+            <video width="320" height="180" controls>
+                <source src="movie.mp4" type="video/mp4">
+                Your browser doesn't support video.
+            </video>
+
+            <h3>SVG Graphics</h3>
+            <svg width="100" height="100">
+                <circle cx="50" cy="50" r="40" stroke="blue" stroke-width="4" fill="lightblue" />
+            </svg>
+        </section>
+
+        <!-- Tables -->
+        <section id="tables">
+            <h2>4. Tables</h2>
+            <table>
+                <caption>Project Timeline</caption>
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Duration</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Research</td>
+                        <td>2 Weeks</td>
+                        <td>Done</td>
+                    </tr>
+                    <tr>
+                        <td>Design</td>
+                        <td>3 Weeks</td>
+                        <td>Active</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Total Estimate</td>
+                        <td>5 Weeks</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <!-- Forms -->
+        <section id="forms">
+            <h2>5. Forms & Interaction</h2>
+            <form action="#" method="get">
+                <fieldset>
+                    <legend>Contact Us</legend>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required><br><br>
+
+                    <label for="color">Favorite Color:</label>
+                    <input type="color" id="color" name="color"><br><br>
+
+                    <label for="search">Search:</label>
+                    <input type="search" id="search" name="search" placeholder="Type here..."><br><br>
+
+                    <label for="tel">Telephone:</label>
+                    <input type="tel" id="tel" name="tel" placeholder="123-456-7890"><br><br>
+
+                    <label for="file">Upload File:</label>
+                    <input type="file" id="file" name="file"><br><br>
+
+                    <label for="bday">Birthday:</label>
+                    <input type="date" id="bday" name="bday"><br><br>
+
+                    <label for="skills">Choose a skill:</label>
+                    <input list="skill-list" id="skills" name="skills">
+                    <datalist id="skill-list">
+                        <option value="HTML">
+                        <option value="CSS">
+                        <option value="JavaScript">
+                    </datalist><br><br>
+
+                    <button type="button" onclick="document.getElementById('dialog').showModal()">Open Dialog</button>
+                    <input type="submit" value="Send">
+                </fieldset>
+            </form>
+
+            <dialog id="dialog">
+                <h3>Message</h3>
+                <p>You've opened the native HTML5 dialog!</p>
+                <button onclick="document.getElementById('dialog').close()">Close</button>
+            </dialog>
+
+            <h3>Dynamic Output</h3>
+            <form oninput="res.value=parseInt(v1.value)+parseInt(v2.value)">
+                <input type="range" id="v1" value="20"> +
+                <input type="number" id="v2" value="30"> =
+                <output name="res" for="v1 v2">50</output>
+            </form>
+        </section>
+
+        <!-- Miscellaneous -->
+        <section id="misc">
+            <h2>6. Miscellaneous</h2>
+            <details>
+                <summary>Click to see more</summary>
+                <p>Surprise! You found the hidden <code>&lt;details&gt;</code> content.</p>
+            </details>
+            <p>Current Progress: <progress value="75" max="100"></progress> 75%</p>
+            <p>Storage Capacity: <meter value="0.4" min="0" max="1">40%</meter></p>
+            <p>Time: <time datetime="2026-04-30">April 30, 2026</time></p>
+            <h3>Embedded Content</h3>
+            <iframe src="index.html" width="100%" height="150" title="Iframe example"></iframe>
+        </section>
+
+        <!-- Global Attributes -->
+        <section id="global-attributes">
+            <h2>7. Global Attributes</h2>
+            <div draggable="true" style="padding: 10px; border: 1px solid #ccc; background: #eee; cursor: grab;">
+                I am <strong>draggable</strong>! Try dragging me.
+            </div>
+            <p>Hover over this <span title="Hello! I am a tooltip.">text</span> for a tooltip.</p>
+            <p>This text is <span hidden>invisible</span> because of the <code>hidden</code> attribute.</p>
+            <p>Tab to me: <a href="#" tabindex="1">First</a>, <a href="#" tabindex="2">Second</a>.</p>
+        </section>
+        <!-- Learning Checklist Section -->
+        <section id="checklist">
+            <h2>8. Learning Checklist</h2>
+            <p>Use this table to keep track of the tags you have explored in this guide.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Tag</th>
+                        <th>Description</th>
+                        <th>Learned?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Structure</td>
+                        <td><code>&lt;main&gt;</code></td>
+                        <td>The central content of the page.</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td>Text</td>
+                        <td><code>&lt;strong&gt;</code></td>
+                        <td>Important text (bold).</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td>Multimedia</td>
+                        <td><code>&lt;figure&gt;</code></td>
+                        <td>Self-contained content like images.</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td>Forms</td>
+                        <td><code>&lt;datalist&gt;</code></td>
+                        <td>Autocomplete options for inputs.</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td>Interaction</td>
+                        <td><code>&lt;dialog&gt;</code></td>
+                        <td>A popup box or modal.</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer id="main-footer">
+        <p>&copy; 2026 HTML Reference Guide | Created by Naol Yizotaw</p>
+        <p>Contact: <a href="mailto:naol.yizotaw@gmail.com">naol.yizotaw@gmail.com</a></p>
+        <p><a href="#top">Back to top</a></p>
+    </footer>
+
+</body>
+</html>
