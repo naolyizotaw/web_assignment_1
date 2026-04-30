@@ -7,14 +7,14 @@
 </head>
 <body>
 
-    <!-- Structure Section -->
+    
     <header>
-        <h1>Strictly Pure HTML Tag Guide</h1>
+        <h1> HTML Tag </h1>
         <p>This page uses no CSS or JavaScript styling. Everything you see is the browser's default rendering.</p>
         <nav>
             <a href="#text">Text</a> | 
             <a href="#lists">Lists</a> | 
-            <a href="#multimedia">Multimedia</a> | 
+            <a href="#media">Media</a> | 
             <a href="#tables">Tables</a> | 
             <a href="#forms">Forms</a> | 
             <a href="#semantic">Semantic</a>
@@ -50,12 +50,7 @@
                 <small>Small text</small><br>
                 <sub>Subscript text</sub><br>
                 <sup>Superscript text</sup><br>
-                <abbr title="HyperText Markup Language">HTML</abbr> (Abbreviation with title)<br>
-                <cite>This is a citation</cite><br>
                 <code>This is a code block</code><br>
-                <kbd>Ctrl+S</kbd> (Keyboard input)<br>
-                <samp>Sample output</samp><br>
-                <var>x</var> = <var>y</var> + 2 (Variable)<br>
                 <dfn>Definition term</dfn><br>
                 <q>Inline quote</q><br>
                 
@@ -105,9 +100,8 @@ and line breaks.
 
         <hr>
 
-        <!-- Multimedia Elements -->
-        <section id="multimedia">
-            <h2>3. Multimedia & Graphics</h2>
+        <section id="media">
+            <h2>3. Media</h2>
             
             <h3>Image</h3>
             <img src="puppy_lovers/puppy-1.jpg" alt="A cute puppy" width="200">
@@ -121,13 +115,13 @@ and line breaks.
             <h3>Audio</h3>
             <audio controls>
                 <source src="audio.mp3" type="audio/mpeg">
-                Your browser does not support audio.
+                
             </audio>
 
             <h3>Video</h3>
             <video width="320" height="240" controls>
                 <source src="movie.mp4" type="video/mp4">
-                Your browser does not support video.
+                
             </video>
 
             
@@ -135,14 +129,10 @@ and line breaks.
 
         <hr>
 
-        <!-- Table Elements -->
+        
         <section id="tables">
             <h2>4. Tables</h2>
             <table border="1">
-                <colgroup>
-                    <col span="1" style="background-color: #f2f2f2;">
-                    <col span="2">
-                </colgroup>
                 <caption>Table with Colgroup Styling</caption>
                 <thead>
                     <tr>
@@ -154,13 +144,13 @@ and line breaks.
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>Alice</td>
-                        <td>Active</td>
+                        <td>Naol</td>
+                        <td>present</td>
                     </tr>
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colspan="3">End of User Table</td>
+                        <td colspan="3">Table sample</td>
                     </tr>
                 </tfoot>
             </table>
@@ -182,10 +172,10 @@ and line breaks.
                     <input type="search" id="search" name="search"><br><br>
 
                     <label for="tel">Telephone:</label>
-                    <input type="tel" id="tel" name="tel" placeholder="123-456-7890"><br><br>
+                    <input type="tel" id="tel" name="tel" placeholder="+251912345678"><br><br>
 
                     <label for="file">File Upload:</label>
-                    <input type="file" id="file" name="file"><br><br>
+                    <input type="file" id="file" name="file"  accept=".pdf"><br><br>
 
                     <label for="range">Range:</label>
                     <input type="range" id="range" name="range"><br><br>
@@ -204,26 +194,26 @@ and line breaks.
                     <select id="select" name="select">
                         <optgroup label="Option Group">
                             <option value="o1">Option 1</option>
+                            <option value="o2">Option 2</option>
+                            <option value="o3">Option 3</option>
+                            <option value="o4">Option 4</option>
                         </optgroup>
                     </select><br><br>
 
-                    <label for="browsers">Datalist (Try typing):</label>
+                    <label for="browsers">Browser list:</label>
                     <input list="browser-list" id="browsers" name="browsers">
                     <datalist id="browser-list">
                         <option value="Chrome">
                         <option value="Firefox">
                         <option value="Safari">
+                        <option value="Edge">
+                        <option value="Opera">
                     </datalist><br><br>
 
                     <label for="area">Textarea:</label><br>
                     <textarea id="area" name="area" rows="4" cols="30"></textarea><br><br>
 
-                    <p>
-                        Calculator: 
-                        <input type="number" id="a" value="10"> + 
-                        <input type="number" id="b" value="20"> = 
-                        <output name="res" for="a b">30</output>
-                    </p>
+                  
 
                     <input type="submit" value="Submit">
                     <input type="reset" value="Reset">
@@ -253,12 +243,10 @@ and line breaks.
             <p>Meter: <meter value="0.5" min="0" max="1">50%</meter></p>
             <p>Time: <time datetime="2026-04-30">April 30</time></p>
             
-            <p draggable="true">This is draggable.</p>
+            
             <p contenteditable="true">This is editable. Click and type!</p>
 
-            <template id="myTemplate">
-                <p>This content is hidden by default.</p>
-            </template>
+            
         </section>
     </main>
 
